@@ -31,8 +31,19 @@ body {
   left: 300px;
   width: 100%;
   z-index: 100;
-  /* ----- */
-  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.box_upgrade{
+  width: calc(100% - 300px);
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 25px;
+}
+.box_upgrade span{
+  border: 2px solid white;
+  padding: 15px 25px;
+  border-radius: 50px;
 }
 /*---------- HEADER----------- */
 /* ------------------CORPO DELLA PAGINA----------*/
@@ -59,7 +70,7 @@ aside{
 }
 aside .playlist_nav_lat{
  height: 300px;
- overflow: auto;
+ overflow-y: auto;
 }
 .logo_img{
   width: 30px;
@@ -75,20 +86,22 @@ aside .playlist_nav_lat{
   overflow: auto;
 }
 .navmenu{
-  max-width: 70%;
-  margin: auto;
   margin-top: 90px;
 }
 .menu_flex{
+  width: 80%;
+  margin: auto;
+}
+.navmenu .menu_flex .list_inline{
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
-.navmenu .menu_flex li{
+.navmenu .menu_flex .list_inline li{
   flex-basis: calc(100% / 6);
   padding: 5px;
-  font-size: 15px;
+  font-size: 12px;
 }
 .wrapper_music {
   display: flex;
@@ -119,35 +132,44 @@ footer {
   padding: 0px 10px;
 }
 .wrapper_play{
-  max-width: calc(100% / 3);
+  flex-basis: 30%;
+  text-align: center;
 }
-footer ul li{
-  border: 1px solid white;
-  padding: 5px;
-  margin: 0px 5px;
+.wrapper_play .list_inline{
+  align-items: center;
 }
-/* --------FOOTER--------- */
+.wrapper_play ul li{
+  flex-grow: 1;
+}
+/* --------/FOOTER--------- */
 /* Media Query */
 @media screen and (max-width: 992px) {
-  .navmenu .menu_flex li{
+  .navmenu .menu_flex .list_inline li{
     flex-basis: calc(100% / 5);
   }
   .card_album {
     flex-basis: calc((100% / 4) - 10px);
   }
 }
-
 @media screen and (max-width: 768px) {
-  .navmenu .menu_flex li{
+  .navmenu .menu_flex .list_inline li{
     flex-basis: calc(100% / 4);
   }
   .card_album {
     flex-basis: calc((100% / 2) - 10px);
   }
 }
-
 @media screen and (max-width: 576px) {
-  .navmenu .menu_flex li{
+  aside{
+    width: 100px;
+  }
+  .upgrade{
+    left: 100px;
+  }
+  .box_upgrade{
+    width: calc(100% - 100px);
+  }
+  .navmenu .menu_flex .list_inline li{
     flex-basis: calc(100% / 3);
   }
 }
