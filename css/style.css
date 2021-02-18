@@ -29,18 +29,30 @@ body {
 }
 /*---------- HEADER----------- */
 /* ------------------CORPO DELLA PAGINA----------*/
-
 main {
   background-color: purple;
   height: calc(100% - 100px);
   display: flex;
 }
 aside{
-  background-color: lightyellow;
+  color: white;
+  background-color: black;
   width: 300px;
   flex-shrink: 0;
   height: 100%;
+  padding: 20px;
 }
+aside .logo{
+  display: flex;
+  align-items: center;
+}
+.logo_img{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin-right: 20px;
+}
+
 .spotify_list{
   width: 100%;
   height: 100%;
@@ -89,6 +101,9 @@ footer {
   max-width: 100%;
   background-color: green;
   padding: 0px 10px;
+}
+.wrapper_play{
+  max-width: calc(100% / 3);
 }
 footer ul li{
   border: 1px solid white;
