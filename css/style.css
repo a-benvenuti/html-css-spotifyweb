@@ -16,29 +16,51 @@ body {
   height: 100vh
 }
 /*---------- HEADER----------- */
-header {
+.upgrade{
+  height: 80px;
+  position: fixed;
   background-color: blue;
-  height: 100px;
-  padding: 0px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  top: 0;
+  left: 300px;
+  width: 100%;
+  z-index: 100;
+  /* ----- */
+  padding: 10px;
 }
-header .upgrade {
- border: 2px solid white;
- padding: 15px 25px;
- border-radius: 50px;
-}
-/* header ul li:not(:last-child) {
-  margin-right: 5px;
-} */
 /*---------- HEADER----------- */
 /* ------------------CORPO DELLA PAGINA----------*/
 
 main {
   background-color: purple;
-  height: calc(100% - 110px);
+  height: calc(100% - 100px);
+  display: flex;
+}
+aside{
+  background-color: lightyellow;
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+.spotify_list{
+  width: 100%;
+  height: 100%;
   overflow: auto;
+}
+.navmenu{
+  max-width: 80%;
+  margin: auto;
+  margin-top: 90px;
+}
+.menu_flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+.navmenu .menu_flex li{
+  flex-basis: calc(100% / 6);
+  padding: 5px;
+  font-size: 15px;
 }
 .wrapper_music {
   display: flex;
@@ -50,11 +72,8 @@ main {
   margin: auto;
 }
 .card_album {
-  /* position: relative; */
   flex-basis: calc((100% / 6) - 10px);
   margin: 5px;
-  /* border-radius: 5px;
-  overflow: hidden; */
 }
 .card_album img {
   width: 100%;
@@ -67,6 +86,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  max-width: 100%;
   background-color: green;
   padding: 0px 10px;
 }
@@ -78,18 +98,26 @@ footer ul li{
 /* --------FOOTER--------- */
 /* Media Query */
 @media screen and (max-width: 992px) {
+  .navmenu .menu_flex li{
+    flex-basis: calc(100% / 5);
+  }
   .card_album {
     flex-basis: calc((100% / 4) - 10px);
   }
 }
 
 @media screen and (max-width: 768px) {
+  .navmenu .menu_flex li{
+    flex-basis: calc(100% / 4);
+  }
   .card_album {
     flex-basis: calc((100% / 2) - 10px);
   }
 }
 
 @media screen and (max-width: 576px) {
-
+  .navmenu .menu_flex li{
+    flex-basis: calc(100% / 3);
+  }
 }
 /* /Media Query */
