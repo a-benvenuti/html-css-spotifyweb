@@ -5,28 +5,63 @@
   box-sizing: border-box;
 }
 /* /Reset */
+/* color */
+.color_aside{
+  background-color: black;
+  color: #666666;
+}
+.color_header{
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.color_spotify{
+  background-color: #141922;
+  color: white;
+}
+.color_footer{
+  background-color: #282828;
+  color: white;
+}
+/* color */
 /* -----------MIX-------------- */
-.list_inline {
-  display: flex;
+.margin_sec_aside{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text-center{
+  text-align:center;
+}
+.overflow-effect{
+  overflow:auto;
+}
+.list_none li{
   list-style: none;
 }
-.padding_top30{
-  padding-top: 30px;
+.list_inline li{
+  display: inline;
+  list-style: none;
 }
-.box1_nav_lat li{
-  list-style-type: none;
-  padding-top: 15px;
+footer .list_none li:not(:last-child){
+  margin-right: 20px;
 }
+/* effetti hover */
+.hover-effect li:hover a{
+  color:#fff;
+}
+.hover-effect  li:hover{
+  border-left:3px solid #ADFF2F;
+}
+/* effetti hover */
 /* -----------/MIX-------------- */
 body {
   color: white;
-  height: 100vh
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
-/*---------- HEADER----------- */
+/*---------------------------------HEADER------------------------ */
 .upgrade{
   height: 80px;
   position: fixed;
-  background-color: rgba(0, 0, 255, 0.5);
   top: 0;
   left: 300px;
   width: 100%;
@@ -38,58 +73,176 @@ body {
   width: calc(100% - 300px);
   display: flex;
   justify-content: flex-end;
-  padding: 15px 25px;
+  padding: 15px 0px;
 }
-.box_upgrade span{
+.box_upgrade h2{
+  font-size: 15px;
   border: 2px solid white;
   padding: 15px 25px;
   border-radius: 50px;
+  margin-right: 20px;
 }
-/*---------- HEADER----------- */
-/* ------------------CORPO DELLA PAGINA----------*/
+@media screen and (max-width: 1100px) {
+  .box_upgrade{
+    width: calc(100% - 300px);
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 900px) {
+  .box_upgrade{
+    width: calc(100% - 300px);
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 680px) {
+  .box_upgrade{
+    width: calc(100% - 100px);
+    justify-content: flex-end;
+  }
+}
+/*---------- -------------------/HEADER---------------------------- */
+/* ------------------------CORPO DELLA PAGINA----------------------*/
 main {
-  background-color: purple;
-  height: calc(100% - 100px);
+  height: calc(100% - 140px);
   display: flex;
 }
-/* --------aside--------- */
-aside{
+/* ---------------ASIDE---------------- */
+/* menu responsive */
+.logo-small{
   color: white;
-  background-color: black;
+  font-size:40px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  display:none;
+}
+.menu-small {
+  display:none;
+}
+.menu-small li{
+  list-style-type: none;
+}
+.menu-small li a img{
+  height: 40px;
+  padding-left: 10px;
+}
+.utente-small{
+  margin-top:auto;
+  display: none;
+}
+.download-small{
+  padding-left: 13px;
+}
+.user-small{
+  padding-left: 11px;
+  margin-top: 20px;
+}
+.utente-small .download-icon{
+  height: 30px;
+  width: 30px;
+  display: block;
+}
+.utente-small .user-icon{
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: grey;
+  display: block;
+}
+/* /menu responsive */
+aside{
   width: 300px;
   flex-shrink: 0;
   height: 100%;
   padding: 20px;
-  display: flex;
+  display:flex;
   flex-direction: column;
-  justify-content: space-between;
 }
-.logo{
-  display: flex;
-  align-items: center;
+.menu li{
+  list-style-type: none;
 }
-/* aside .playlist_nav_lat{
- height: 300px;
- overflow-y: auto;
-} */
-/* .play_overflow{
-  height: 250px;
-  overflow: auto;
-} */
-.logo_img{
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  margin-right: 20px;
+.logo img{
+  height:40px;
 }
-.logo_img_set{
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  margin-right: 20px;
-  margin-bottom: 5px;
+.menu li a{
+  color: #666666;
+  text-decoration: none;
+  font-size:14px;
+  font-weight: bold;
 }
-/* ----------/aside------- */
+.margin_sec_aside ul li{
+  margin-bottom: 8px;
+}
+.playlist-bar h4{
+  color: white;
+}
+.playlist-bar ul li{
+  margin-top: 8px;
+}
+.playlist-bar i{
+ padding: 10px 11px;;
+ font-size: 20px;
+ color: black;
+ background-color: grey;
+ margin-right: 8px;
+}
+.menu img{
+  height:25px;
+  vertical-align: middle;
+}
+.utente{
+  margin-top:auto; /*NON TOCCARE!*/
+}
+.utente span i{
+  color: white;
+}
+.utente hr{
+  margin-top:10px;
+  margin-bottom:20px;
+}
+.utente .user-icon{
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: grey;
+  vertical-align:middle;
+}
+.utente strong{
+  margin-left: 10px;
+}
+#special_user{
+  color: white;
+}
+@media screen and (max-width: 680px) {
+  aside{
+    width: 100px;
+  }
+  .upgrade{
+    left: 100px;
+  }
+  .logo{
+    display:none;
+  }
+  .logo-small{
+    display:block;
+  }
+  .menu{
+    display:none;
+  }
+  .menu-small{
+    display:block;
+  }
+  .playlist-bar{
+    display:none;
+  }
+  .utente{
+    display:none;
+  }
+  .utente-small{
+    display: block;
+  }
+}
+/* ---------------/ASIDE---------------- */
+/* ---------------SPOTIFY---------------- */
 .spotify_list{
   width: 100%;
   height: 100%;
@@ -104,13 +257,17 @@ aside{
   width: 80%;
   margin: auto;
 }
-.navmenu .menu_flex .list_inline{
+.navmenu .menu_flex .nav_list_inline{
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
 }
-.navmenu .menu_flex .list_inline li{
+.nav_list_inline{
+  display: flex;
+  list-style-type: none;
+}
+.navmenu .menu_flex .nav_list_inline li{
   flex-basis: calc(100% / 6);
   padding: 5px;
   font-size: 12px;
@@ -132,73 +289,36 @@ aside{
   width: 100%;
   display: block;
 }
-/* ------------------CORPO DELLA PAGINA----------*/
-/* --------FOOTER--------- */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  max-width: 100%;
-  background-color: green;
-  padding: 0px 10px;
-}
-.wrapper_play{
-  flex-basis: 30%;
-  /* max-width: 30%; */
-  background-color: grey;
-  height: 10px;
-}
-.wrapper_play .list_inline{
-  align-items: center;
-}
-.wrapper_play ul li{
-  flex-grow: 1;
-  /* padding: 5px; */
-}
-/* --------/FOOTER--------- */
-/* Media Query */
-@media screen and (max-width: 992px) {
-  .navmenu .menu_flex .list_inline li{
+@media screen and (max-width: 1100px) {
+  .navmenu .menu_flex .nav_list_inline li{
     flex-basis: calc(100% / 5);
   }
   .card_album {
     flex-basis: calc((100% / 4) - 10px);
   }
 }
-@media screen and (max-width: 768px) {
-  .navmenu .menu_flex .list_inline li{
+@media screen and (max-width: 900px) {
+  .navmenu .menu_flex .nav_list_inline li{
     flex-basis: calc(100% / 4);
   }
   .card_album {
     flex-basis: calc((100% / 2) - 10px);
   }
 }
-@media screen and (max-width: 576px) {
-  aside{
-    width: 100px;
-  }
-  .upgrade{
-    left: 100px;
-  }
-  .box_upgrade{
-    width: calc(100% - 100px);
-  }
-  .navmenu .menu_flex .list_inline li{
+@media screen and (max-width: 680px) {
+  .navmenu .menu_flex .nav_list_inline li{
     flex-basis: calc(100% / 3);
   }
-  .logo_testo_spotify,
-  .logo_testo_set,
-  .crea_playlist,
-  .box2_nav_lat{
-    display: none;
-  }
-  .logo_img,
-  .logo_img_set{
-    margin: auto;
-  }
-  .logo_img_set{
-    margin-bottom: 5px;
+}
+@media screen and (max-width: 480px) {
+  .navmenu .menu_flex .nav_list_inline li{
+    flex-basis: calc(100% / 2);
   }
 }
-/* /Media Query */
+/* ---------------/SPOTIFY---------------- */
+/* ----------------------------/CORPO DELLA PAGINA----------------------*/
+/* --------FOOTER--------- */
+footer{
+  height: 140px
+}
+/* --------/FOOTER--------- */

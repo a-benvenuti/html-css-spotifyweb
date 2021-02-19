@@ -5,71 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SpotifyWeb</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- /Google Fonts -->
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <!-- /Fontawesome -->
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- /favicon -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="upgrade">
+    <header class="upgrade color_header">
      <div class="box_upgrade">
-      <span>EFFETTUA L'UPGRADE</span>
+      <h2>EFFETTUA L'UPGRADE</h2>
      </div>
     </header>
 
     <!-- CORPO DELLA PAGINA -->
     <main>
       <!-- ASIDE -->
-      <aside class="nav_laterale">
-        <div class="box1_nav_lat">
+      <aside class="nav_laterale color_aside">
+        <section class="logo-spotify">
           <div class="logo">
-            <div class="logo_img"></div>
-            <div class="logo_testo_spotify">Spotify</div>
+            <img src="img/logo.svg" alt="logo spotify">
           </div>
-          <nav class="personal_nav_lat padding_top30">
-            <div class="logo">
-              <div class="logo_img_set"></div>
-              <div class="logo_testo_set">Home</div>
-            </div>
-            <div class="logo">
-              <div class="logo_img_set"></div>
-              <div class="logo_testo_set">Cerca</div>
-            </div>
-            <div class="logo">
-              <div class="logo_img_set"></div>
-              <div class="logo_testo_set">La tua libreria</div>
-            </div>
-          </nav>
-          <nav class="crea_playlist playlist_nav_lat padding_top30">
-            <div class="logo">
-              <div class="logo_img"></div>
-              <div class="logo_testo_playlist">Crea Playlist</div>
-            </div>
-            <ul class="play_overflow">
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
+          <!-- logo small -->
+          <div class="box_logo_small">
+            <i class="logo-small fab fa-spotify"></i>
+          </div>
+          <!-- /logo small -->
+          <nav class="menu hover-effect margin_sec_aside">
+            <ul>
+              <li><a href=""><img src="img/home.svg" alt="home"> Home</a></li>
+              <li><a href=""><img src="img/search.svg" alt="cerca"> Cerca</a></li>
+              <li><a href=""><img src="img/libreria.svg" alt="libreria"> La tua libreria</a></li>
             </ul>
           </nav>
-        </div>
-        <div class="box2_nav_lat">
-          <div class="">
-            <h5>installa app</h5>
-            <hr>
-            <h3>John Doe</h3>
+          <!-- menu small -->
+          <nav class="menu-small">
+            <ul>
+              <li><a href=""><img src="img/home.svg" alt="home-small"></a></li>
+              <li><a href=""><img src="img/search.svg" alt="cerca-small"></a></li>
+              <li><a href=""><img src="img/libreria.svg" alt="libreria-small"></a></li>
+            </ul>
+          </nav>
+          <!-- /menu small -->
+        </section>
+        <section class="menu playlist-bar overflow-effect">
+          <h4>PLAYLIST</h4>
+          <ul class="overflow-effect ">
+            <li><a href=""><i class="fas fa-plus"></i> Crea Playlist</a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+            <li><a href=""><small>Nome Playlist</small></a></li>
+          </ul>
+        </section>
+        <section class="utente">
+          <span><i class="far fa-arrow-alt-circle-down"></i> <small><strong>Installa app</strong></small> </span>
+          <hr>
+          <span><img class="user-icon" src="img/profile.svg" alt="user icon"> <strong id="special_user">John Doe</strong></span>
+        </section>
+        <section class="utente-small">
+          <div class="download-small">
+            <img class="download-icon" src="img/download.svg" alt="">
           </div>
-        </div>
+          <div class="user-small">
+            <img class="user-icon" src="img/profile.svg" alt="user icon">
+          </div>
+        </section>
       </aside>
       <!-- /ASIDE -->
       <!-- spotify -->
-      <div class="spotify_list">
+      <div class="spotify_list color_spotify">
         <section class="navmenu">
           <div class="menu_flex">
-            <ul class="list_inline">
+            <ul class="nav_list_inline">
               <li>IN EVIDENZA</li>
               <li>PODCAST</li>
               <li>CLASSIFICHE</li>
@@ -139,32 +156,8 @@
     </main>
     <!-- /CORPO DELLA PAGINA -->
 
-    <footer>
-      <div class="wrapper_play">
-        <!-- <ul class="list_inline">
-          <li>album</li>
-          <li>nome album</li>
-          <li>cuore</li>
-          <li>cartella</li>
-        </ul> -->
-      </div>
-      <div class="wrapper_play">
-        <!-- <ul class="list_inline">
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
-        </ul> -->
-      </div>
-      <div class="wrapper_play">
-        <!-- <ul class="list_inline">
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
-          <li>icona</li>
-        </ul> -->
-      </div>
+    <footer class="color_footer">
+
     </footer>
   </body>
 </html>
