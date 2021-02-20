@@ -18,15 +18,17 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- INTESTAZIONE -->
     <header class="upgrade color_header">
      <div class="box_upgrade">
       <h2>EFFETTUA L'UPGRADE</h2>
      </div>
     </header>
+    <!-- /INTESTAZIONE -->
 
     <!-- CORPO DELLA PAGINA -->
     <main>
-      <!-- ASIDE -->
+      <!-- aside -->
       <aside class="nav_laterale color_aside">
         <section class="logo-spotify">
           <div class="logo">
@@ -37,6 +39,8 @@
             <i class="logo-small fab fa-spotify"></i>
           </div>
           <!-- /logo small -->
+        </section>
+        <section class="menu-bar">
           <nav class="menu hover-effect margin_sec_aside">
             <ul>
               <li><a href=""><img src="img/home.svg" alt="home"> Home</a></li>
@@ -54,9 +58,9 @@
           </nav>
           <!-- /menu small -->
         </section>
-        <section class="menu playlist-bar overflow-effect">
+        <section class="playlist-bar menu overflow-effect">
           <h4>PLAYLIST</h4>
-          <ul class="overflow-effect ">
+          <ul class="hover-effect">
             <li><a href=""><i class="fas fa-plus"></i> Crea Playlist</a></li>
             <li><a href=""><small>Nome Playlist</small></a></li>
             <li><a href=""><small>Nome Playlist</small></a></li>
@@ -81,7 +85,7 @@
           </div>
         </section>
       </aside>
-      <!-- /ASIDE -->
+      <!-- /aside -->
       <!-- spotify -->
       <div class="spotify_list color_spotify">
         <section class="navmenu">
@@ -96,58 +100,102 @@
             </ul>
           </div>
         </section>
-        <section class="recenti padding_top30">
+        <section class="recenti">
           <div class="title_recently">
             <h2>Recently played</h2>
           </div>
           <div class="wrapper_music">
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
-              <h3>prova</h3>
-              <h4>prova prova</h4>
+              <div class="cover_play">
+                <img src="img/metal_lifting.jpg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Heavy Metal</h3>
+              <h4><small>Subtitle</small></h4>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/stranger.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h3>
+              <h4><small>Kyle Dixon & Michael Stein</small></h4>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/aquietplace.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>A quiet place</h3>
+              <h4><small>Subtitle</small></h4>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/split.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Slit</h3>
+              <h4><small>Subtitle</small></h4>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/cure.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>A cure for wellness</h3>
+              <h4><small>Subtitle</small></h4>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/sinister.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Sinister</h3>
+              <h4><small>Subtitle</small></h4>
             </div>
           </div>
         </section>
-        <section class="creati padding_top30">
+        <section class="creati">
           <div class="title_creati">
             <h2>Creato per John Doe</h2>
-            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <p><small><strong>Più ascolti, più accurati saranno i suggerimenti.</strong></small></p>
           </div>
           <div class="wrapper_music">
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/radar.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Release Radar</h3>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play">
+                <img src="img/mixdaily.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Daily Mix 1</h3>
             </div>
           </div>
         </section>
-        <section class="artisti_popolari padding_top30">
+        <section class="artisti_popolari">
           <div class="title_creati">
             <h2>Artisti più popolari</h2>
-            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+            <p><small><strong>Più ascolti, più accurati saranno i suggerimenti.</strong></small></p>
           </div>
           <div class="wrapper_music">
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play cover_play_circle">
+                <img src="img/youg.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Lana del Rey</h3>
             </div>
             <div class="card_album">
-              <img src="https://via.placeholder.com/300x180" alt="Foto">
+              <div class="cover_play cover_play_circle">
+                <img src="img/einaudi.jpeg" alt="Foto">
+                <a class="play-btn" href=""><i class="far fa-play-circle"></i></a>
+              </div>
+              <h3>Einaudi</h3>
             </div>
           </div>
         </section>
@@ -156,8 +204,10 @@
     </main>
     <!-- /CORPO DELLA PAGINA -->
 
+    <!-- footer-PLAY -->
     <footer class="color_footer">
 
     </footer>
+    <!-- /footer-PLAY -->
   </body>
 </html>

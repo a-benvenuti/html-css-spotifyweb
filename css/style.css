@@ -34,7 +34,8 @@
 .overflow-effect{
   overflow:auto;
 }
-.list_none li{
+
+/* .list_none li{
   list-style: none;
 }
 .list_inline li{
@@ -43,18 +44,69 @@
 }
 footer .list_none li:not(:last-child){
   margin-right: 20px;
-}
+} */
+
 /* effetti hover */
-.hover-effect li:hover a{
-  color:#fff;
+.box_upgrade h2:hover{
+  border: 2px solid #ADFF2F;
+  color: #ADFF2F;
+  cursor: pointer;
+  transform: scale(1.1);
 }
-.hover-effect  li:hover{
+.hover-effect li:hover a{
+  color:white;
+}
+.menu-bar .hover-effect  li:hover{
   border-left:3px solid #ADFF2F;
+}
+.nav_list_inline li:hover::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 35px;
+  background-color: #ADFF2F;
+  margin: auto;
+}
+/* ----- */
+.card_album:hover{
+  cursor: pointer;
+}
+.card_album .cover_play {
+  position: relative;
+}
+.cover_play::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.cover_play_circle::after{
+  border-radius: 50%;
+}
+.cover_play:hover::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.play-btn {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+}
+.play-btn i{
+  color: white;
+  font-size: 60px;
+}
+.cover_play:hover .play-btn {
+  visibility: visible;
 }
 /* effetti hover */
 /* -----------/MIX-------------- */
 body {
-  color: white;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
@@ -65,7 +117,7 @@ body {
   top: 0;
   left: 300px;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   align-items: center;
 }
@@ -81,6 +133,7 @@ body {
   padding: 15px 25px;
   border-radius: 50px;
   margin-right: 20px;
+  transition: all 0.6s;
 }
 @media screen and (max-width: 1100px) {
   .box_upgrade{
@@ -94,7 +147,7 @@ body {
     justify-content: flex-end;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 768px) {
   .box_upgrade{
     width: calc(100% - 100px);
     justify-content: flex-end;
@@ -204,7 +257,7 @@ aside{
   width: 24px;
   border-radius: 24px;
   background-color: grey;
-  vertical-align:middle;
+  vertical-align:top;
 }
 .utente strong{
   margin-left: 10px;
@@ -212,7 +265,7 @@ aside{
 #special_user{
   color: white;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 768px) {
   aside{
     width: 100px;
   }
@@ -241,6 +294,21 @@ aside{
     display: block;
   }
 }
+@media screen and (max-height: 500px){
+  .utente{
+    display: none;
+  }
+}
+@media screen and (max-height: 440px){
+  .utente-small{
+    display: none;
+  }
+}
+@media screen and (max-height: 340px){
+  .menu-bar, .menu-small, .playlist-bar{
+    display: none;
+  }
+}
 /* ---------------/ASIDE---------------- */
 /* ---------------SPOTIFY---------------- */
 .spotify_list{
@@ -254,7 +322,7 @@ aside{
   margin-top: 90px;
 }
 .menu_flex{
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 .navmenu .menu_flex .nav_list_inline{
@@ -271,6 +339,25 @@ aside{
   flex-basis: calc(100% / 6);
   padding: 5px;
   font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  color: #666666;
+  cursor: pointer;
+}
+.recenti h2,
+.creati h2,
+.artisti_popolari h2{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.recenti h4{
+  margin-top: 10px;
+  color: #666666;
+}
+.creati p,
+.artisti_popolari p{
+  margin-bottom: 20px;
+  color: #666666;
 }
 .wrapper_music {
   display: flex;
@@ -280,14 +367,21 @@ aside{
   width: 100%;
   height: 100%;
   margin: auto;
+  margin-bottom: 30px;
 }
 .card_album {
   flex-basis: calc((100% / 6) - 10px);
   margin: 5px;
+  text-align: center;
+  font-weight: bold;
 }
 .card_album img {
   width: 100%;
   display: block;
+  margin-bottom: 15px;
+}
+.artisti_popolari .card_album img{
+  border-radius: 50%;
 }
 @media screen and (max-width: 1100px) {
   .navmenu .menu_flex .nav_list_inline li{
@@ -310,15 +404,20 @@ aside{
     flex-basis: calc(100% / 3);
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   .navmenu .menu_flex .nav_list_inline li{
     flex-basis: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 500px) {
+  .navmenu .menu_flex .nav_list_inline li{
+    flex-basis: 100%;
   }
 }
 /* ---------------/SPOTIFY---------------- */
 /* ----------------------------/CORPO DELLA PAGINA----------------------*/
 /* --------FOOTER--------- */
 footer{
-  height: 140px
+  height: 140px;
 }
 /* --------/FOOTER--------- */
