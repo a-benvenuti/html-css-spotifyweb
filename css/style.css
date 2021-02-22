@@ -6,6 +6,9 @@
 }
 /* /Reset */
 /* color */
+.color_grey{
+  color: #666666;
+}
 .color_aside{
   background-color: black;
   color: #666666;
@@ -27,6 +30,9 @@
 .flex_display{
   display: flex;
 }
+.no_display{
+  display: none;
+}
 .margin_sec_aside{
   margin-top: 20px;
   margin-bottom: 20px;
@@ -39,7 +45,9 @@
 }
 .list_inline li{
   display: inline;
-  list-style: none;
+}
+.list_type_no{
+  list-style-type: none;
 }
 /* effetti hover */
 .box_upgrade h2:hover{
@@ -56,15 +64,18 @@
   color: white;
 }
 .menu-bar .hover-effect  li:hover{
-  border-left:3px solid #ADFF2F;
+  border-left: 2px solid #ADFF2F;
 }
-.nav_list_inline li:hover::after{
+.nav_list_inline li::after{
   content: "";
   display: block;
   height: 2px;
   width: 35px;
-  background-color: #ADFF2F;
+  background-color: transparent;
   margin: auto;
+}
+.nav_list_inline li:hover::after{
+  background-color: #ADFF2F;
 }
 aside .utente span:hover{
   color: white;
@@ -173,7 +184,7 @@ body {
 /*------------------------------/HEADER---------------------------- */
 /* ------------------------CORPO DELLA PAGINA----------------------*/
 main {
-  height: calc(100% - 140px);
+  height: calc(100% - 125px);
 }
 /* ---------------ASIDE---------------- */
 /* menu responsive */
@@ -182,13 +193,6 @@ main {
   font-size:40px;
   padding-left: 10px;
   margin-bottom: 10px;
-  display:none;
-}
-.menu-small {
-  display:none;
-}
-.menu-small li{
-  list-style-type: none;
 }
 .menu-small li a img{
   height: 40px;
@@ -196,7 +200,6 @@ main {
 }
 .utente-small{
   margin-top:auto;
-  display: none;
 }
 .download-small{
   padding-left: 13px;
@@ -208,14 +211,12 @@ main {
 .utente-small .download-icon{
   height: 30px;
   width: 30px;
-  display: block;
 }
 .utente-small .user-icon{
   height: 40px;
   width: 40px;
   border-radius: 40px;
   background-color: grey;
-  display: block;
 }
 /* /menu responsive */
 aside{
@@ -225,17 +226,15 @@ aside{
   padding: 20px;
   flex-direction: column;
 }
-.menu li{
-  list-style-type: none;
-}
 .logo img{
   height:40px;
 }
 .menu li a{
-  color: #666666;
   text-decoration: none;
   font-size:14px;
-  font-weight: bold;
+}
+.menu-bar .hover-effect  li{
+  border-left: 2px solid transparent;
 }
 .margin_sec_aside ul li{
   margin-bottom: 8px;
@@ -247,7 +246,6 @@ aside{
   color: white;
 }
 .new_playlist a{
-  color: #666666;
   text-decoration: none;
 }
 .new_playlist i{
@@ -351,17 +349,13 @@ aside{
 }
 .navmenu .menu_flex .nav_list_inline{
   flex-wrap: wrap;
-  align-content: center;
   justify-content: center;
-  list-style-type: none;
 }
 .navmenu .menu_flex .nav_list_inline li{
   flex-basis: calc(100% / 6);
   padding: 5px;
   font-size: 12px;
   text-align: center;
-  font-weight: bold;
-  color: #666666;
   cursor: pointer;
 }
 .recenti h2,
@@ -372,16 +366,13 @@ aside{
 }
 .recenti h4{
   margin-top: 10px;
-  color: #666666;
 }
 .creati p,
 .artisti_popolari p{
   margin-bottom: 20px;
-  color: #666666;
 }
 .wrapper_music {
   flex-wrap: wrap;
-  align-content: flex-start;
   justify-content: flex-start;
   width: 100%;
   height: 100%;
@@ -437,8 +428,8 @@ aside{
 /* ----------------------------/CORPO DELLA PAGINA----------------------*/
 /* --------FOOTER--------- */
 footer{
-  height: 140px;
-  padding: 20px 10px;
+  height: 125px;
+  padding: 5px 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -458,14 +449,8 @@ footer .play_footer_left{
 .playing_album_text{
   margin: 0px 10px;
 }
-.playing_album_text small{
-  color: #666666;
-}
 .playing_album_icon .fa-heart{
  margin: 0px 3px;
-}
-.playing_album_icon i{
-  color: #666666;
 }
 footer .play_footer_center{
   flex-basis: 44%;
@@ -473,7 +458,7 @@ footer .play_footer_center{
 .play_footer_center .play_comand{
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .play_comand .fa-play-circle{
   font-size: 35px;
@@ -503,8 +488,7 @@ footer .play_footer_center{
 .played .fa-circle{
   position: absolute;
   bottom:-6px;
-  left: 90%;
-  display: none;
+  left: 95%;
 }
 .startered{
   margin-right: 30px;
@@ -536,45 +520,32 @@ footer .play_footer_right{
 .volume .fa-circle{
   position: absolute;
   bottom:-6px;
-  left: 80%;
-  display: none;
+  left: 90%;
 }
 @media screen and (max-width: 1135px){
-  .play_footer_left,
-  .play_footer_right{
-    flex-basis: 18%;
-    flex-direction: column;
-  }
-  .playing_album_img,
-  .playing_album_text,
-  .playing_album_icon{
-    align-self: flex-start;
-  }
-  .playing_album_text{
-    margin: 0px;
-  }
-  .footer_right_icon{
-    width: 100%;
-    display: flex;
+  footer{
     flex-wrap: wrap;
-    flex-direction: column;
   }
-  .footer_right_icon li:first-child,
-  .footer_right_icon li:nth-child(2){
-    align-self: flex-end;
+  footer .play_footer_center{
+    flex-basis: 100%;
+    order: 1;
   }
-  .play_footer_right .fa-desktop{
-    margin: 5px 0px;
+  footer .play_footer_right{
+    flex-basis: 50%;
+    order: 3;
   }
-  .play_footer_right .fa-volume-up{
-    margin-left: 6px;
+  footer .play_footer_left{
+    flex-basis: 45%;
+    order: 2;
   }
-  .volume_bar{
-    width: 100%;
-    height: 5px;
-    background-color: #666666;
-    border-radius: 5px;
-    margin-left: 10px;
+  .playing_album_img img{
+    width: 80%;
+  }
+  .playing_album_text small{
+    display: none;
+  }
+  .playing_album_icon .fa-heart{
+   margin: 0px;
   }
 }
 /* --------/FOOTER--------- */
