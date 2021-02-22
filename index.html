@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,17 +21,17 @@
   </head>
   <body>
     <!-- INTESTAZIONE -->
-    <header class="upgrade color_header">
-     <section class="box_upgrade">
+    <header class="upgrade flex_display color_header">
+     <section class="box_upgrade flex_display">
        <h2>EFFETTUA L'UPGRADE</h2>
      </section>
     </header>
     <!-- /INTESTAZIONE -->
 
     <!-- CORPO DELLA PAGINA -->
-    <main>
+    <main class="flex_display">
       <!-- aside -->
-      <aside class="nav_laterale color_aside">
+      <aside class="nav_laterale flex_display color_aside">
         <section class="logo-spotify">
           <div class="logo">
             <img src="img/logo.svg" alt="logo spotify">
@@ -60,10 +60,12 @@
           </nav>
           <!-- /menu small -->
         </section>
-        <section class="playlist-bar menu overflow-effect">
+        <section class="new_playlist">
           <h4>PLAYLIST</h4>
+          <span class="hover-effect"><a href=""><i class="fas fa-plus"></i><strong>Crea Playlist</strong></a></span>
+        </section>
+        <section class="playlist-bar menu overflow-effect">
           <ul class="hover-effect">
-            <li><a href=""><i class="fas fa-plus"></i> Crea Playlist</a></li>
             <li><a href=""><small>Nome Playlist</small></a></li>
             <li><a href=""><small>Nome Playlist</small></a></li>
             <li><a href=""><small>Nome Playlist</small></a></li>
@@ -92,7 +94,7 @@
       <div class="spotify_list color_spotify">
         <section class="navmenu">
           <div class="menu_flex">
-            <ul class="nav_list_inline">
+            <ul class="nav_list_inline flex_display">
               <li>IN EVIDENZA</li>
               <li>PODCAST</li>
               <li>CLASSIFICHE</li>
@@ -106,7 +108,7 @@
           <div class="title_recently">
             <h2>Recently played</h2>
           </div>
-          <div class="wrapper_music">
+          <div class="wrapper_music flex_display">
             <div class="card_album">
               <div class="cover_play">
                 <img src="img/metal_lifting.jpg" alt="Foto">
@@ -162,7 +164,7 @@
             <h2>Creato per John Doe</h2>
             <p><small><strong>Più ascolti, più accurati saranno i suggerimenti.</strong></small></p>
           </div>
-          <div class="wrapper_music">
+          <div class="wrapper_music flex_display">
             <div class="card_album">
               <div class="cover_play">
                 <img src="img/radar.jpeg" alt="Foto">
@@ -184,7 +186,7 @@
             <h2>Artisti più popolari</h2>
             <p><small><strong>Più ascolti, più accurati saranno i suggerimenti.</strong></small></p>
           </div>
-          <div class="wrapper_music">
+          <div class="wrapper_music flex_display">
             <div class="card_album">
               <div class="cover_play cover_play_circle">
                 <img src="img/youg.jpeg" alt="Foto">
@@ -207,8 +209,8 @@
     <!-- /CORPO DELLA PAGINA -->
 
     <!-- footer-PLAY -->
-    <footer class="color_footer">
-      <section class="play_footer_left">
+    <footer class="flex_display color_footer">
+      <section class="play_footer_left flex_display">
         <div class="playing_album_img">
           <img src="img/sinister.jpeg" alt="Foto">
         </div>
@@ -224,14 +226,14 @@
         </div>
       </section>
       <section class="play_footer_center">
-        <ul class="play_comand list_inline">
+        <ul class="play_comand flex_display list_inline">
           <li><a href="#"><i class="fas fa-random"></i></a></li>
           <li><a href="#"><i class="fas fa-step-backward"></i></a></li>
           <li><a href="#"><i class="far fa-play-circle"></i></a></li>
           <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
           <li><a href="#"><i class="fas fa-undo-alt"></i></a></li>
         </ul>
-        <div class="play_start">
+        <div class="play_start flex_display">
           <small class="startered"><strong>0:25</strong></small>
           <div class="time_bar">
             <div class="played"><i class="fas fa-circle"></i></div>
@@ -239,7 +241,7 @@
           <small class="remaining"><strong>4:35</strong></small>
         </div>
       </section>
-      <section class="play_footer_right">
+      <section class="play_footer_right flex_display">
         <ul class="footer_right_icon list_inline">
           <li><a href="#"><i class="fas fa-bars"></i></a></li>
           <li><a href="#"><i class="fas fa-desktop"></i></a></li>
