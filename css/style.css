@@ -9,6 +9,9 @@
 .color_grey{
   color: #666666;
 }
+.color_white{
+  color: white;
+}
 .color_aside{
   background-color: black;
   color: #666666;
@@ -48,6 +51,9 @@
 }
 .list_type_no{
   list-style-type: none;
+}
+.decoration_no{
+  text-decoration: none;
 }
 /* effetti hover */
 .box_upgrade h2:hover{
@@ -103,12 +109,12 @@ aside .utente span:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
 .play-btn {
+  visibility: hidden;
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 1;
-  visibility: hidden;
   transform: translate(-50%, -50%);
 }
 .play-btn i{
@@ -189,7 +195,6 @@ main {
 /* ---------------ASIDE---------------- */
 /* menu responsive */
 .logo-small{
-  color: white;
   font-size:40px;
   padding-left: 10px;
   margin-bottom: 10px;
@@ -230,7 +235,6 @@ aside{
   height:40px;
 }
 .menu li a{
-  text-decoration: none;
   font-size:14px;
 }
 .menu-bar .hover-effect  li{
@@ -238,15 +242,6 @@ aside{
 }
 .margin_sec_aside ul li{
   margin-bottom: 8px;
-}
-.playlist-bar{
-  height: 100%;
-}
-.new_playlist h4{
-  color: white;
-}
-.new_playlist a{
-  text-decoration: none;
 }
 .new_playlist i{
  padding: 10px 11px;;
@@ -256,15 +251,15 @@ aside{
  margin-right: 8px;
  margin-top: 8px;
 }
+.playlist-bar{
+  height: 100%;
+}
 .playlist-bar ul li{
   margin-top: 8px;
 }
 .menu img{
   height:25px;
   vertical-align: middle;
-}
-.utente span i{
-  color: white;
 }
 .utente hr{
   margin-top:10px;
@@ -375,15 +370,12 @@ aside{
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  height: 100%;
   margin: auto;
   margin-bottom: 30px;
 }
 .card_album {
   flex-basis: calc((100% / 6) - 10px);
   margin: 5px;
-  text-align: center;
-  font-weight: bold;
 }
 .card_album img {
   width: 100%;
@@ -432,9 +424,6 @@ footer{
   padding: 5px 10px;
   justify-content: space-between;
   align-items: center;
-}
-footer i{
-  color: white;
 }
 footer .play_footer_left{
   flex-basis: 18%;
