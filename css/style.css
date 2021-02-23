@@ -522,7 +522,7 @@ footer .play_footer_right{
   bottom:-6px;
   left: 90%;
 }
-@media screen and (max-width: 1135px){
+@media screen and (max-width: 1191px){
   footer{
     flex-wrap: wrap;
   }
@@ -531,7 +531,7 @@ footer .play_footer_right{
     order: 1;
   }
   footer .play_footer_right{
-    flex-basis: 50%;
+    flex-basis: 45%;
     order: 3;
   }
   footer .play_footer_left{
