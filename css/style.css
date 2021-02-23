@@ -332,9 +332,6 @@ aside{
   .logo-spotify, .box_logo_small{
     display: none;
   }
-  header{
-    position: static;
-  }
   .upgrade{
     display: none;
   }
