@@ -230,6 +230,7 @@ aside{
   height: 100%;
   padding: 20px;
   flex-direction: column;
+  z-index: 500;
 }
 .logo img{
   height:40px;
@@ -325,6 +326,20 @@ aside{
 @media screen and (max-height: 340px){
   .menu-bar, .menu-small{
     display: none;
+  }
+}
+@media screen and (max-height: 205px){
+  .logo-spotify, .box_logo_small{
+    display: none;
+  }
+  header{
+    position: static;
+  }
+  .upgrade{
+    display: none;
+  }
+  aside{
+    padding: 0;
   }
 }
 /* ---------------/ASIDE---------------- */
@@ -424,6 +439,7 @@ footer{
   padding: 5px 10px;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 footer .play_footer_left{
   flex-basis: 18%;
